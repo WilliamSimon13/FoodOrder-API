@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const{
+    renderCategories, 
     createCategory,
     getCategories,
     updateCategory,
@@ -16,4 +17,5 @@ router.route('/:id')
     .put(updateCategory)
     .delete(deleteCategory);
 
+router.get('/views', renderCategories);
 module.exports = router;
